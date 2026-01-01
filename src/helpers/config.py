@@ -4,9 +4,11 @@ class Settings(BaseSettings):
     APP_NAME: str
     APP_VERSION: str
     OPENAI_API_KEY: str
+
     model_config = SettingsConfigDict(
-        env_file=".env", 
-        extra="ignore"
+        env_file=".env",
+        extra="ignore",
     )
 
-settings = Settings()
+def get_settings():
+    return Settings()
