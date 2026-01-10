@@ -12,7 +12,7 @@ class Project(BaseModel):
             raise ValueError('project_id must be be alphanumeric')
 
         return value
-    class config:
+    class Config:
         arbitrary_types_allowed= True
 
     
